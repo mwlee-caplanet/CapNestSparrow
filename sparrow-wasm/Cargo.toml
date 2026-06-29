@@ -1,0 +1,21 @@
+[package]
+name = "sparrow-wasm"
+version = "0.1.0"
+edition = "2024"
+description = "WASM bindings for Sparrow — 2D irregular strip packing optimization in the browser"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+sparrow-core = { path = "../sparrow-core", default-features = false }
+wasm-bindgen = "0.2"
+serde = "1.0"
+serde_json = "1.0"
+serde-wasm-bindgen = "0.6"
+js-sys = "0.3"
+console_error_panic_hook = "0.1"
+log = "0.4"
+wasm-logger = "0.2"
+jagua-rs = { features = ["spp"], version = "0.7.2" }
+rand = "0.10"

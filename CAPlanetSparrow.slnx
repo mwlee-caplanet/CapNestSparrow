@@ -1,0 +1,62 @@
+<Solution>
+  <Folder Name="/RustSources/">
+    <File Path="Cargo.toml" />
+  </Folder>
+  <Folder Name="/RustSources/src/">
+    <File Path="src/bench.rs" />
+    <File Path="src/config.rs" />
+    <File Path="src/consts.rs" />
+    <File Path="src/ffi.rs" />
+    <File Path="src/jni_glue.rs" />
+    <File Path="src/lib.rs" />
+    <File Path="src/main.rs" />
+  </Folder>
+  <Folder Name="/RustSources/src/eval/">
+    <File Path="src/eval/lbf_evaluator.rs" />
+    <File Path="src/eval/mod.rs" />
+    <File Path="src/eval/sample_eval.rs" />
+    <File Path="src/eval/sep_evaluator.rs" />
+    <File Path="src/eval/specialized_jaguars_pipeline.rs" />
+  </Folder>
+  <Folder Name="/RustSources/src/optimizer/">
+    <File Path="src/optimizer/compress.rs" />
+    <File Path="src/optimizer/explore.rs" />
+    <File Path="src/optimizer/explore_mods.rs" />
+    <File Path="src/optimizer/lbf.rs" />
+    <File Path="src/optimizer/mod.rs" />
+    <File Path="src/optimizer/separator.rs" />
+    <File Path="src/optimizer/worker.rs" />
+  </Folder>
+  <Folder Name="/RustSources/src/quantify/">
+    <File Path="src/quantify/mod.rs" />
+    <File Path="src/quantify/overlap_proxy.rs" />
+    <File Path="src/quantify/pair_matrix.rs" />
+    <File Path="src/quantify/tracker.rs" />
+  </Folder>
+  <Folder Name="/RustSources/src/quantify/simd/">
+    <File Path="src/quantify/simd/circles_soa.rs" />
+    <File Path="src/quantify/simd/mod.rs" />
+    <File Path="src/quantify/simd/overlap_proxy_simd.rs" />
+  </Folder>
+  <Folder Name="/RustSources/src/sample/">
+    <File Path="src/sample/best_samples.rs" />
+    <File Path="src/sample/coord_descent.rs" />
+    <File Path="src/sample/mod.rs" />
+    <File Path="src/sample/search.rs" />
+    <File Path="src/sample/uniform_sampler.rs" />
+  </Folder>
+  <Folder Name="/RustSources/src/util/">
+    <File Path="src/util/assertions.rs" />
+    <File Path="src/util/bit_reversal_iterator.rs" />
+    <File Path="src/util/ctrlc_terminator.rs" />
+    <File Path="src/util/io.rs" />
+    <File Path="src/util/listener.rs" />
+    <File Path="src/util/mod.rs" />
+    <File Path="src/util/svg_exporter.rs" />
+    <File Path="src/util/terminator.rs" />
+  </Folder>
+  <Folder Name="/Samples/">
+    <Project Path="csharp/CAPlanetSparrowSample.WPF/CAPlanetSparrowSample.WPF.csproj" Id="13ffa5ae-7961-49a3-a3d7-d3223204c910" />
+  </Folder>
+
+</Solution>

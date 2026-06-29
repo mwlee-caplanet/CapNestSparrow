@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Sparrow WASM Demo</title>
+</head>
+<body>
+  <h1>Sparrow Nesting — WASM Demo</h1>
+  <textarea id="input" rows="20" cols="80" placeholder="ExtSPInstance JSON을 여기에 붙여넣으세요"></textarea><br>
+  <label>시간 제한 (초): <input id="timeout" type="number" value="10" min="1"></label>
+  <button id="run">최적화 실행</button>
+  <pre id="output"></pre>
+
+  <script type="module">
+    import init, { optimize } from './pkg/sparrow_wasm.js';
+
+    document.getElementById('run').onclick = async () => {
+      const input = document.getElementById('input').value;
+      const timeout = parseFloat(document.getElementById('timeout').value) || 10;
+      const output = document.getElementById('output');
+
+      try {
+        output.textContent = '실행 중...';
+        const start = performance.now();
+        const resultJson = optimize(input, timeout);
+        const elapsed = ((performance.now() - start) / 1000).toFixed(1);
+        const result = JSON.parse(resultJson);
+        output.textContent =
+          `완료! (${elapsed}초)\n` +
+          `compaction_ratio: ${result.compaction_ratio}\n\n` +
+          JSON.stringify(result, null, 2);
+      } catch (e) {
+        output.textContent = `오류: ${e}`;
+      }
+    };
+
+    await init();
+    console.log('Sparrow WASM 준비 완료');
+  </script>
+</body>
+</html>

@@ -19,3 +19,22 @@ Cargo.lock
 
 **/.live_solution.svg
 
+# Rust 빌드 결과물
+/target/
+
+# C# 빌드 결과물 (csharp 하위 모든 프로젝트)
+**/bin/
+**/obj/
+
+# 프로젝트 출력 디렉터리
+/output/
+/out/
+
+# Visual Studio
+/.vs/
+*.suo
+*.user
+
+# Rust 설정 캐시
+/.cargo/
+
